@@ -1,12 +1,14 @@
 image: alpine/edge
-oauth: pages.sr.ht/PAGES:RW
 packages:
 - hut
+oauth: pages.sr.ht/PAGES:RW
 environment:
   site: nirm.al
+sources:
+  - https://git.sr.ht/~mysticmode/mysticmode.srht.site
 tasks:
 - package: |
-    cd $site
+    cd mysticmode.srht.site
     tar -cvz . > ../site.tar.gz
 - upload: |
     hut pages publish -d $site site.tar.gz
