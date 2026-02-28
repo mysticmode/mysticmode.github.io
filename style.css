@@ -8,11 +8,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Neue Haas Grotesk Display Pro";
-  src: url(font/6e2df30bac10d3b6a0e5.woff2) format("woff2");
-}
-
 html,
 body {
   margin: 0;
@@ -20,10 +15,10 @@ body {
 }
 
 body {
-  font-family: "Neue Haas Grotesk Display Pro", serif;
+  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-feature-settings: "tnum";
   font-variant-numeric: tabular-nums;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: var(--font-weight-normal);
   line-height: 1.5;
   text-decoration: none;
@@ -35,7 +30,7 @@ body {
 
 a {
   display: inline-block;
-  color: #15C;
+  color: #000;
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
@@ -91,12 +86,13 @@ pre {
 
 nav {
   display: block;
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 nav a {
   margin-right: 1em;
-  font-size: 21px;
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
   color: #333;
   text-transform: uppercase;
 }
@@ -109,23 +105,38 @@ nav a:last-child {
   width: 100%;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 ul li {
   list-style: none;
-  list-style-type: square;
   text-transform: uppercase;
+  margin-bottom: 1em;
 }
 
 .content-wrapper .title {
-  font-size: 2rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  font-family: "Neue Haas Grotesk Display Pro", serif;
+}
+
+ul li a {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: #333;
+}
+
+ul li span {
+  display: block;
 }
 
 .content-wrapper .title span,
 main ul li span {
-  font-size: 22px;
+  font-size: 14px;
   color: #555;
-  font-weight: normal;
+  font-weight: var(--font-weight-bold);
 }
 
 .content-wrapper .title span {
@@ -136,7 +147,7 @@ hr {
   position: relative;
   display: block;
   height: 1.20rem;
-  margin: calc(1.20rem * 1.5) 0;
+  margin: 1em 0;
   border: none;
   color: #000;
 }
@@ -153,8 +164,13 @@ hr::after {
 }
 
 footer {
-  font-size: 16px;
+  font-size: 12px;
+  color: #666;
   margin-bottom: 3em;
+}
+
+footer a {
+  color: #666;
 }
 
 @media only screen and (max-width: 700px) {
