@@ -18,7 +18,7 @@ body {
   font-family: "Times", serif, "Amiri", "Arial", serif; 
   font-feature-settings: "tnum";
   font-variant-numeric: tabular-nums;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: var(--font-weight-normal);
   line-height: 1.5;
   text-decoration: none;
@@ -63,7 +63,7 @@ nav {
 }
 
 nav a {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: var(--font-weight-normal);
   color: #000;
   text-transform: lowercase;
@@ -108,7 +108,7 @@ ul li {
   align-items: start;
   width: 800px;
   text-align: justify;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
 .content-wrapper.blog,
@@ -127,13 +127,17 @@ ul li {
   border-left: 1px dotted;
 }
 
+.aside {
+  font-size: 14px!important;
+}
+
 .aside .me {
-  height: 147px;
+  display: flex;
 }
 
 .aside .me img {
-  width: 147px;
-  height: 147px;
+  width: 100%;
+  height: auto;
 }
 
 .aside .github-username {
@@ -148,7 +152,7 @@ ul li {
 
 .aside .headline {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .aside .elsewhere {
@@ -156,6 +160,7 @@ ul li {
 }
 
 .aside .elsewhere h5 {
+  font-size: 16px;
   font-style: italic;
   margin: 7px 0 2px;
 }
@@ -165,7 +170,7 @@ ul li {
 }
 
 .aside .elsewhere a {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .aside .elsewhere div {
@@ -179,33 +184,34 @@ ul li {
 }
 
 .content-wrapper .title {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: var(--font-weight-bold);
 }
 
 ul li a {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: var(--font-weight-normal);
   color: #333;
 }
 
 ul li span {
   display: block;
+  font-size: 13px;
 }
 
 .content-wrapper .title span,
 main ul li span {
-  font-size: 14px;
+  font-size: 13px;
   color: #555;
-  font-weight: var(--font-weight-bold);
 }
 
 .content-wrapper .title span {
   display: block;
+  font-weight: var(--font-weight-normal);
 }
 
 footer {
-  font-size: 12px;
+  font-size: 16px;
   color: #666;
   margin-top: 30px;
   width: 800px;
