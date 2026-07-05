@@ -1,7 +1,12 @@
-:root {
-  --font-weight-normal: 400;
-  --font-weight-medium: 600;
-  --font-weight-bold: 800;
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: local('Bricolage Grotesque Variable'), 
+       local('BricolageGrotesque-VariableFont_opsz,wdth,wght'),
+       url('./fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.woff2') format('woff2');
+  font-weight: 200 800;
+  font-stretch: 75% 100%;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -15,17 +20,15 @@ body {
 }
 
 body {
-  font-family: "Times", serif, "Amiri", "Arial", serif; 
+  font-family: 'Bricolage Grotesque', sans-serif;
   font-feature-settings: "tnum";
   font-variant-numeric: tabular-nums;
-  font-size: 18px;
-  font-weight: var(--font-weight-normal);
+  font-size: 19px;
+  font-weight: 400;
   line-height: 1.5;
   text-decoration: none;
   color: #333;
-  width: 800px;
-  margin: 2em auto;
-  padding: 0 2em;
+  margin: 1.5em;
 }
 
 p {
@@ -34,205 +37,85 @@ p {
   hyphens: auto;
 }
 
-span.pre {
-  background: #DDD;
-  padding: 0.2em 0.4em;
-}
-
-pre {
-  margin: 1em 0;
-  padding: 0.2em 0.4em;
-  background: #ddd;
-  white-space: nowrap;
-  display: block;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-header {
-  width: 800px;
-  display: flex;
-  flex-direction: column;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  border: 1px dotted;
-  border-top: none;
-}
-
-nav a {
-  font-size: 18px;
-  font-weight: var(--font-weight-normal);
-  color: #000;
-  text-transform: lowercase;
-  text-decoration: none;
-  border-bottom: none;
-  padding: 0 1em;
-}
-
 a {
-  color: #000;
+  color: #2274A7;
   text-decoration: none;
-  border-bottom: 1px dotted;
 }
 
-a:hover, nav a:hover {
-  background-color: #000;
-  color: white;
-}
-
-.home img {
-  width: 100%;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
+a:hover {
+  text-decoration: underline;
 }
 
 ul li {
   list-style: none;
-  margin-bottom: 1em;
+  list-style-type: square;
 }
 
-.separator {
-  width: 800px;
-  display: flex;
-  justify-content: center;
-}
-
-.content-wrapper {
-  display: flex;
-  align-items: start;
-  width: 800px;
-  text-align: justify;
-  margin-bottom: 1em;
-}
-
-.content-wrapper.blog,
-.content-wrapper.poems {
-  margin-top: 20px;
-  flex-direction: column;
-}
-
-.content-wrapper.blog .content,
-.content-wrapper.poems .content {
-  min-height: auto;
-}
-
-.content-wrapper .aside {
-  width: 275px;
-  border-left: 1px dotted;
-}
-
-.aside {
-  font-size: 14px!important;
-}
-
-.aside .me {
-  display: flex;
-}
-
-.aside .me img {
-  width: 100%;
-  height: auto;
-}
-
-.aside .github-username {
-  background: black;
-  text-align: center;
-  padding: 7px 0;
-}
-
-.aside .github-username a {
-  color: white;
-}
-
-.aside .headline {
-  text-align: center;
-  font-size: 14px;
-}
-
-.aside .elsewhere {
-  padding: 0 5px;
-}
-
-.aside .elsewhere h5 {
-  font-size: 16px;
-  font-style: italic;
-  margin: 7px 0 2px;
-}
-
-.aside .elsewhere h4 {
+header .title {
+  font-size: 17px;
+  font-weight: 600;
   margin: 0;
 }
 
-.aside .elsewhere a {
+header .desc {
   font-size: 14px;
+  color: #666;
+  margin: 0;
 }
 
-.aside .elsewhere div {
-  margin-bottom: 15px;
+main {
+  max-width: 800px;
+  margin: -72px auto 20px;
 }
 
-.content-wrapper .content {
-  width: auto;
-  min-height: 500px;
-  padding-right: 10px;
+nav {
+  display: flex;
+  justify-content: end;
+  width: 100%;
 }
 
-.content-wrapper .title {
-  font-size: 1.4rem;
-  font-weight: var(--font-weight-bold);
+nav a {
+  margin-right: 30px;
 }
 
-ul li a {
-  font-size: 18px;
-  font-weight: var(--font-weight-normal);
-  color: #333;
+nav a:last-child {
+  margin-right: 0;
 }
 
-ul li span {
-  display: block;
-  font-size: 13px;
+nav a.active {
+  text-decoration: underline;
 }
 
-.content-wrapper .title span,
-main ul li span {
-  font-size: 13px;
-  color: #555;
+.path {
+  font-size: 17px;
+  color: #666;
+  margin-top: 30px;
 }
 
-.content-wrapper .title span {
-  display: block;
-  font-weight: var(--font-weight-normal);
+span.sub {
+  color: #666;
+}
+
+.elsewhere a {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 footer {
-  font-size: 16px;
-  color: #666;
-  margin-top: 30px;
-  width: 800px;
-  text-align: justify;
-}
-
-footer a {
+  font-size: 14px;
   color: #666;
 }
 
-@media only screen and (max-width: 700px) {
-  body {
-    width: 100%;
-    margin: 0;
-    padding: 1em;
-  }
+main .title {
+  font-size: 21px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
-@media only screen and (max-width: 540px) {
-  .header p img {
-    width: 100%;
-    height: auto;
-  }
+main .date {
+  font-size: 17px;
+  color: #666;
+  margin-left: 7px;
 }
