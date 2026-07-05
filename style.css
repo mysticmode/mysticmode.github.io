@@ -119,3 +119,28 @@ main .date {
   color: #666;
   margin-left: 7px;
 }
+
+@media screen and (max-width: 1200px) {
+  header {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main {
+    margin-top: 40px;
+  }
+  
+  nav {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  main .title {
+    flex-direction: column;
+  }
+}
